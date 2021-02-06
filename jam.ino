@@ -53,7 +53,7 @@ void setup()
   myDisplay.displayClear();
 
   myDisplay.setTextAlignment(PA_CENTER);
-  char opening[12] = "Hello World!";
+  char opening[16] = "Hello World!";
   myDisplay.print(opening);
 
   delay(2000);
@@ -83,9 +83,11 @@ void loop()
     char date[12];
 
     sprintf(date, "%s", daysOfTheWeek[now.dayOfTheWeek()]);
+    myDisplay.print(date);
     delay(1500);
 
     sprintf(date, "%d-%d-%d", now.day(), now.month(), now.year());
+    myDisplay.print(date);
     delay(2500);
 
     clkTime = millis();
